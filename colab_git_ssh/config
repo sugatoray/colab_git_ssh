@@ -1,4 +1,4 @@
-## %%writefile ~/.ssh/config
+%%writefile ~/.ssh/config
 
 ## Adding this helps avoid interactively adding 
 #  a new host to the list of known hosts: 
@@ -23,6 +23,16 @@ Host github.com
 #   2. Copy and paste the public-key (COLAB@GitLab)
 Host gitlab.com
     HostName gitlab.com
+    Preferredauthentications publickey
+    IdentityFile ~/.ssh/id_rsa_colab
+    StrictHostKeyChecking no
+
+# Colab-to-BitBucket.com Account
+# ToDo: 
+#   1. Go to BitBucket and add a new SSH Key
+#   2. Copy and paste the public-key (COLAB@BitBucket)
+Host bitbucket.org
+    HostName bitbucket.org
     Preferredauthentications publickey
     IdentityFile ~/.ssh/id_rsa_colab
     StrictHostKeyChecking no
