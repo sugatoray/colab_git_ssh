@@ -1,38 +1,38 @@
 %%writefile ~/.ssh/config
 
-## Adding this helps avoid interactively adding 
-#  a new host to the list of known hosts: 
+## Adding this helps avoid interactively adding
+#  a new host to the list of known hosts:
 #     ~/.ssh/known_hosts
 ## Source: https://askubuntu.com/a/323629/853549
 #-----------------------------------------------
 # StrictHostKeyChecking no
 
 # Colab-to-Github.com Account
-# ToDo: 
-#   1. Go to GitLab and add a new SSH Key 
+# ToDo:
+#   1. Go to GitLab and add a new SSH Key
 #   2. Copy and paste the public-key (COLAB@GitHab)
 Host github.com
     HostName github.com
     User git
-    IdentityFile ~/.ssh/id_rsa_colab
+    IdentityFile ~/.ssh/id_rsa_colab2github
     StrictHostKeyChecking no
 
 # Colab-to-GitLab.com Account
-# ToDo: 
+# ToDo:
 #   1. Go to GitLab and add a new SSH Key
 #   2. Copy and paste the public-key (COLAB@GitLab)
 Host gitlab.com
     HostName gitlab.com
     Preferredauthentications publickey
-    IdentityFile ~/.ssh/id_rsa_colab
+    IdentityFile ~/.ssh/id_rsa_colab2gitlab
     StrictHostKeyChecking no
 
 # Colab-to-BitBucket.com Account
-# ToDo: 
+# ToDo:
 #   1. Go to BitBucket and add a new SSH Key
 #   2. Copy and paste the public-key (COLAB@BitBucket)
 Host bitbucket.org
     HostName bitbucket.org
     Preferredauthentications publickey
-    IdentityFile ~/.ssh/id_rsa_colab
+    IdentityFile ~/.ssh/id_rsa_colab2bitbucket
     StrictHostKeyChecking no
