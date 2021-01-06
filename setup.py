@@ -12,6 +12,18 @@ import os
 PKG = "colab_git_ssh"
 VERSIONFILE = os.path.join(PKG, "_version.py")
 verstr = "unknown"
+
+verstr = "unknown"
+try:
+    with open("colab_git_ssh/colab_git_ssh/_version.py", "r") as f:
+        content = f.read()
+    verstr = re.findall("__version__\s*=\s*(.*)\s*\n", content)[0].replace('"',"").replace("'","")
+    if verstr=='':
+        verstr = "unknown"
+except: 
+    verstr = "unkown"
+    print("VERSION file not found.")
+
 # try:
 #     verstrline = open(VERSIONFILE, "rt").read()
 # except EnvironmentError:
