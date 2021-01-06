@@ -15,7 +15,7 @@ verstr = "unknown"
 
 verstr = "unknown"
 try:
-    with open("colab_git_ssh/colab_git_ssh/_version.py", "r") as f:
+    with open(VERSIONFILE, "r") as f:
         content = f.read()
     verstr = re.findall("__version__\s*=\s*(.*)\s*\n", content)[0].replace('"',"").replace("'","")
     if verstr=='':
