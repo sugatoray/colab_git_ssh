@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.0.1",
     author="Sugato Ray",
     author_email="sugatoray.dev@gmail.com",
-    description="A python library to help setup SSH on Colab and access Git cloud providers like: GitHub, GitLab, BitBucket.",
+    description="A python library to help setup SSH on Colab and access both public and private repositories on Git cloud providers like: GitHub, GitLab, BitBucket.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/sugatoray/colab_git_ssh",
